@@ -4,11 +4,11 @@ import dynamic from "next/dynamic";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { Summary } from "../components/Summary";
-import { TableInfos } from "../components/Table";
+import { TableInfos } from "../components/TableInfos";
 
 const Chart = dynamic(() => import('react-apexcharts'), {
   ssr:false,
-})//precisamos importar o chart dessa maneira pq ele só roda no browser e como estamos usando next, quando recarregamos a pagina da erro, o dynamic faz um carregamento dinamico, então desligamos o ssr para fazer com que o Chart seja carregado apenas pelo lado do browser
+})
 
 const options: ApexOptions = {
   chart: {

@@ -1,15 +1,5 @@
-import { Button, Table, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
+import { Box, Button, Table, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
 import { Pagination } from "../Pagination";
-
-interface TableData {
-  pedido: string,
-  data: string,
-  produtos: string,
-  total: string,
-  comprador: string,
-  statusDoPedido: string,
-  acaoRecomendada: string,
-}
 
 export function TableInfos() {
   const TableData = [
@@ -51,7 +41,7 @@ export function TableInfos() {
     },
   ]
   return (
-    <>
+    <Box overflowX='scroll' overflowY='hidden' maxW={1020}>
     <Text fontSize={20} m='24px'>Ultimos pedidos realizados</Text>
     <Table colorScheme="whiteAlpha">
       <Thead >
@@ -63,7 +53,6 @@ export function TableInfos() {
           <Th px={["1","2","6"]} color="gray.900" >Comprador</Th>
           <Th px={["1","2","6"]} color="gray.900" >Status do Pedido</Th>
           <Th px={["1","2","6"]} color="gray.900" >Ação recomendada</Th>
-          {/* { isWideVersion && (<Th>Data de cadastro</Th>)} */}
         </Tr>
       </Thead>
 
@@ -80,8 +69,6 @@ export function TableInfos() {
               <Td color='gray.400'>
                 <Button bg='blue.500' color='gray.50' >{info.acaoRecomendada}</Button>
               </Td>
-              {/* {isWideVersion && (<Td>{user.createdAt}</Td>)} */}
-                {/* { isWideVersion ? <EditButton /> : <IconEditButton />} */}
             </Tr>
           );
         })}
@@ -90,6 +77,6 @@ export function TableInfos() {
 
     <Pagination />
 
-  </>
+  </Box>
   );
 }

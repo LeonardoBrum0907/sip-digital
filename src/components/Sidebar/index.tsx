@@ -4,7 +4,6 @@ import { Logo } from "./Logo";
 
 export function Sidebar() {
   return(
-    //a largura esta na unidade de medida do chakra, para ser convertido em px é só multiplicar por 4
     <Box as='aside' w='64' h='100vh' bg='gray.50'>
       <Box w='100%' h={190}>
         <Flex h='100%' pl='12' alignItems='center' >
@@ -19,22 +18,27 @@ export function Sidebar() {
               <Icon as={RiDashboardLine} fontSize='20' />
               <Text ml='4' fontWeight='medium'>Dashboard</Text>
             </Link>
+
             <Link display='flex' alignItems='center' color='gray.500' >
               <Icon as={RiDashboardLine} fontSize='20' />
               <Text ml='4' fontWeight='medium'>Pedidos</Text>
             </Link>
+
             <Link display='flex' alignItems='center' color='gray.500' >
               <Icon as={RiDashboardLine} fontSize='20' />
               <Text ml='4' fontWeight='medium'>Produtos</Text>
             </Link>
+
             <Link display='flex' alignItems='center' color='gray.500' >
               <Icon as={RiDashboardLine} fontSize='20' />
               <Text ml='4' fontWeight='medium'>Clientes</Text>
             </Link>
+
             <Link display='flex' alignItems='center' color='gray.500' >
               <Icon as={RiDashboardLine} fontSize='20' />
               <Text ml='4' fontWeight='medium'>Financeiro</Text>
             </Link>
+            
             <Link display='flex' alignItems='center' color='gray.500' >
               <Icon as={RiDashboardLine} fontSize='20' />
               <Text ml='4' fontWeight='medium'>Usuários</Text>

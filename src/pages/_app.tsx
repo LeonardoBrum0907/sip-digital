@@ -1,5 +1,5 @@
-import { ChakraProvider } from '@chakra-ui/react'; // contexto que fica por volta do app para que possa utilizar o theme em toda aplicação
-import { AppProps } from 'next/app'; // para deixar o componente tipado
+import { ChakraProvider } from '@chakra-ui/react';
+import { AppProps } from 'next/app';
 import { theme } from '../styles/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
